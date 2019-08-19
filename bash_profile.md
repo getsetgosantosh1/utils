@@ -1,7 +1,7 @@
 .bash_profile
 
 ```bash
-export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\$ "
+export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]⚡ "
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
@@ -17,6 +17,16 @@ alias h="history"
 alias python='python3'
 alias pip='pip3'
 alias md='mkdir'
+
+# push pop
+alias pushdd="pushd \$PWD > /dev/null"
+alias cd='pushdd;cd'
+#below to go back to a previous directory (or more)
+alias popdd='popd >/dev/null'
+alias cd.='popdd'
+alias cd..='popdd;popdd'
+alias cd...='popdd;popdd;popdd'
+alias cd....='popdd;popdd;popdd;popdd'
 
 # applications
 alias spyder='spyder3'
